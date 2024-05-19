@@ -1,0 +1,215 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-areas:
+    "nav header"
+    "nav main"
+    "nav main"
+    "footer aside"
+    "footer aside";
+  height: 100vh;
+}
+
+nav {
+  grid-area: nav;
+  background: #00ccff;
+  color: white;
+  font-size: 15px;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  width: 100px;
+  margin: 40px;
+}
+
+nav li {
+  list-style: none;
+}
+
+nav li a {
+  text-decoration: none;
+}
+
+header {
+  grid-area: header;
+  text-align: center;
+  font-size: 25px;
+}
+
+main {
+  grid-area: main;
+}
+
+.contacto {
+  grid-area: aside;
+  background-color:  #00ccff;
+  color: white;
+}
+
+.contacto div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-direction: row;
+  margin-top: 0.5%;
+  align-content: center;
+  
+}
+
+footer {
+  grid-area: footer;
+  background-color:  #00ccff;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+}
+
+.card {
+  height: 300px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin: 20px;
+  font-size: 30px;
+}
+
+.card img {
+  border-radius: 5px;
+  width: 100%;
+  height: 90%;
+}
+
+.card-content {
+  padding: 0;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card-back {
+  background-color: rgb(110, 103, 103);
+  color: white;
+  position: absolute;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  transition: all 0.6s ease;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.proyectos {
+  display: grid;
+  text-align: center;
+  font-size: 25px;
+}
+
+.card:hover .card-back {
+  transform: rotateY(0deg);
+}
+
+.img-h {
+  display: flex;
+  margin: auto;
+}
+
+@media screen and (max-width: 576px) {
+  body {
+    grid-template-areas:
+      "nav"
+      "header"
+      "main"
+      "aside"
+      "footer";
+  }
+  .img-h {
+    display: flex;
+    height: 80%;
+    width: 80%;
+    padding: 15px;
+   
+  }
+  .proyectos {
+    display: grid;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 70px;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: auto;
+  }
+
+  .card-back {
+    background-color: transparent;
+    color: black;
+    position: relative;
+    transform: rotateY(0deg);
+    backface-visibility: visible;
+    transition: none;
+    height: 100%;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 300px;
+    width: 300px;
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .card img {
+    border-radius: 5px;
+    width: 300px;
+    height: 100;
+  }
+
+  .card-content {
+    padding: 0;
+    text-align: center;
+    display: none;
+  }
+
+  .logo {
+    display: flex;
+    flex-direction: row;
+    height: 150px;
+    width: 200px;
+    justify-content: center;
+    margin: auto;
+    padding-bottom: 50px;
+    padding-top: 20px;
+
+  }
+
+  .contacto div {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-top: 20px;
+    
+  }
+
+
+
+
+  
+}
